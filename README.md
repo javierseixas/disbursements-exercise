@@ -6,7 +6,7 @@ Let's code!
 
 I've tried to follow an step by step coding. You'll find my code in the `src` folder and the tests in the `tests` folder.
 
-I've been writing down some explanations about what I thought and the decisions I was making, for facilitating the revision. You can find that on [#Taken steps](). You'll see the commit hash during this coding history.
+I've been writing down some explanations about what I thought and the decisions I was making, for facilitating the revision. You can find that on [#Taken steps](#taken-steps). You'll see the commit hash during this coding history.
 
 However, you'll also find some `TODO`s and comments in some files, about things missing.
 
