@@ -1,13 +1,4 @@
-// TODO: This should be moved to another service probably
-const feePercentatge = (amount) => {
-    if (amount < 50) {
-        return 1
-    } else if (amount < 300) {
-        return 0.95
-    } else {
-        return 0.85
-    }
-};
+const feePercentage = require("./FeePercentageResolver");
 
 const calculate = (orders) => {
 
@@ -22,10 +13,10 @@ const calculate = (orders) => {
     let disbursementsAfterFee = [];
 
     for (const [merchant_id, grossAmount] of Object.entries(reduce)) {
-            const disbursementFee = grossAmount * feePercentatge(grossAmount) / 100;
+            const disbursementFee = grossAmount * feePercentage(grossAmount) / 100;
 
             // TODO: Here I'm transforming to an entity. It should probably go to another place
-            disbursementsAfterFee.push({ amount: grossAmount * disbursementFee, week: 2});
+            disbursementsAfterFee.push({ merchant_id, amount: grossAmount * disbursementFee, week: 2});
     }
 
     return disbursementsAfterFee;

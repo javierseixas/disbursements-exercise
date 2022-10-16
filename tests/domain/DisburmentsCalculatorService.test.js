@@ -6,7 +6,7 @@ describe("calculate Disbursements", () => {
         const orders = [
             {
                 id: "abc",
-                merchant_id: "saler",
+                merchant_id: "mer_1",
                 amount: 100.0
             }
         ];
@@ -14,6 +14,7 @@ describe("calculate Disbursements", () => {
 
         const expected = [
             {
+                merchant_id: "mer_1",
                 amount: 95.0, // TODO: This amount will be calculated in a service of the
                 week: 2, // TODO: How will assign this value
             }
