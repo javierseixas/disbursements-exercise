@@ -32,6 +32,9 @@ Let's code!
 * Since the domain logic works quite well, I feel confortable to move to another layer, the Application.
 * Now, I prefer start coding directly in the class, since the `CalculateDisbursementsUseCase` has responsibility more about orchestration. This give the opportunity to reorder ideas and global design.
 * I've declared my intentions about the responsibilities of the application layer. And now I have a more clear idea about what is missing, which is mainly the persisting part, and the week input.
+* _commit_ `cdd774d4eb6650edf3640e011060664c0d524809`
+* Now, since I only have around 30min left, I want to face the API part. I'll use some scaffolding from a previous project
+* I start creating the test and the main classes for running an HTTP server with Koa.js framework. However, the 3 hours have passed, so I'm going to commit the current state of the repo.
 * _commit_
 
 
