@@ -24,4 +24,8 @@ Let's code!
 * I created the logic that should calculate the disbursements. The test is green now.
 * _commit_ `f4b1dbe4e47da9e5ce9bbff3f18c5ce1f238e78f`
 * Following TDD approach, after green, I refactor a bit for improving readibility.
-* _commit_ 
+* _commit_ `1821b43f30ddb9ed2c5291b7eff76b5144d6d096`
+* Now, I want to add more test for being sure that I'm covering more scenarios. The next I'm going to add is for calculating with more than one merchant and, despite of it could ne also another test, I'll check that is aggregating well amounts of the same merchant.
+* Running this test, I noticed that I was calculating wrongly the fee 🤦‍♂️ I fix it ✌️‍
+* In the new test I also found a bug in the amount aggregation. New both tests are green.
+* _commit_

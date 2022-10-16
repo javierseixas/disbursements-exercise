@@ -1,3 +1,4 @@
+// TODO: Create tests for this logic
 const feePercentage = (amount) => {
     if (amount < 50) {
         return 1
