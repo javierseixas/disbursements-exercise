@@ -3,6 +3,12 @@ const feePercentage = require("./FeePercentageResolver");
 const calculate = (orders) => {
 
     let reduce = orders.reduce((groupedOrders, order) => {
+
+        /**
+         * TODO: Here we could put a guard clause for checking that the order is completed. Even this is something that.
+         * Even this is something declared in a previous layer, It is a good idea to check, since the cost is very low here
+         */
+
         groupedOrders[order.merchant_id] = groupedOrders[order.merchant_id] || 0.0;
 
         groupedOrders[order.merchant_id] = order.amount + groupedOrders[order.merchant_id];

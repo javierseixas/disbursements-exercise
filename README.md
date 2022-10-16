@@ -28,4 +28,14 @@ Let's code!
 * Now, I want to add more test for being sure that I'm covering more scenarios. The next I'm going to add is for calculating with more than one merchant and, despite of it could ne also another test, I'll check that is aggregating well amounts of the same merchant.
 * Running this test, I noticed that I was calculating wrongly the fee 🤦‍♂️ I fix it ✌️‍
 * In the new test I also found a bug in the amount aggregation. New both tests are green.
+* _commit_ `ba647f3329d84d543174886b5d9920d578ae6777`
+* Since the domain logic works quite well, I feel confortable to move to another layer, the Application.
+* Now, I prefer start coding directly in the class, since the `CalculateDisbursementsUseCase` has responsibility more about orchestration. This give the opportunity to reorder ideas and global design.
+* I've declared my intentions about the responsibilities of the application layer. And now I have a more clear idea about what is missing, which is mainly the persisting part, and the week input.
 * _commit_
+
+
+## Thoughts
+
+* I'm applying a DDD structure, but with Javascript wihtout classes some parts, as the use of Repositories, may look a bit weird
+* For the same reason, I started creating Entities, but still not needed in the exercise.
