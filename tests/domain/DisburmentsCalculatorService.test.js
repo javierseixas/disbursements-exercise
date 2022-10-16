@@ -1,5 +1,5 @@
 const { expect } = require("@jest/globals");
-const {disbursementsCalculator} = require("../../src/domain/DisburmentsCalculatorService");
+const { calculate } = require("../../src/domain/DisburmentsCalculatorService");
 
 describe("calculate Disbursements", () => {
     it("returns a list of disbursements for just one order", () => {
@@ -10,7 +10,7 @@ describe("calculate Disbursements", () => {
                 amount: 100.0
             }
         ];
-        const disbursements = disbursementsCalculator.calculate(orders);
+        const disbursements = calculate(orders);
 
         const expected = [
             {
