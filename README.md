@@ -4,11 +4,11 @@ Let's code!
 
 ## How to read this?
 
-I've tried to follow an step by step coding. You'll find my code in the `src` folder and the tests in the `tests` folder.
+I've tried to follow an step by step coding, following DDD guidance. You'll find my code in the `src` folder and the tests in the `tests` folder.
 
-I've been writing down some explanations about what I thought and the decisions I was making, for facilitating the revision. You can find that at [#Taken steps](#taken-steps). You'll see the commit hash during this coding history.
+I've been writing down some explanations about what I thought and the decisions I was making, for facilitating the revision. You can find that at [#Taken steps](#taken-steps). You'll see the commit hash during this coding history, so you can checkout per commit to see the applied code.
 
-However, you'll also find some `TODO`s and comments in some files, about things missing.
+However, you'll also find some `TODO`s and comments in some files, about things missing. I also include an explanation about how I would continue developing in [#Next steps](#next-steps)
 
 ## What can I run
 
@@ -64,8 +64,31 @@ npm test
 * I start creating the test and the main classes for running an HTTP server with Koa.js framework. However, the 3 hours have passed, so I'm going to commit the current state of the repo.
 * _commit_
 
+# Next steps
+
+Here I want to explain how I would continue the exercise if I had a few more hours
+
+1. I'd make integration test with supertest work.
+2. I'd add a `listDisbursementsUseCase` which would call a `DisbursementsRepository`. I'd code a test for checking this, asserting the collection
+3. I'd implement a persistence service (such a DB) for being able to make that work.
+4. I'd include some fixtures in the test, using the previous DB
+5. Once I have the first test pass, I'd add the logic in the `listDisbrusementsUseCase` for adding the filter logic, for `merchant_id` and `week`. Each one with its own test.
+6. I wouldn't do any security since it is not required
+
+Once I've done this, I think the feature for the API would be ok, so I'd retake the disbursements calculation part:
+
+1. In the `CalculateDisbursementsUseCase` are missing the repositories for getting orders and for persisting disbursements
+2. By using the DB connection created previously, I'd developed both implementations.
+
+While writing these, I still have no a clear idea about how to separate the domain from the implementation (in javascript), so I'd google a bit for getting ideas about how do it.
+
+Later on, I would also make of use of the domain entities, `Order`, `Disbursement`, etc, instead of using plain objects.
+
+And probably, once I have all this, I would recheck the whole code for see if there any part that doesn't fit in the whole design.
+
 
 ## Thoughts
 
-* I'm applying a DDD structure, but with Javascript wihtout classes some parts, as the use of Repositories, may look a bit weird
+* I'm applying a DDD structure, but with Javascript without classes some parts, as the use of Repositories, may look a bit weird
 * For the same reason, I started creating Entities, but still not needed in the exercise.
+* I don't have a clear idea about how code the repository implementations separately from the domain.
